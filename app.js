@@ -10,12 +10,10 @@ window.onload = function() {
   document.querySelector("#boton").addEventListener("click", () => {
     document.querySelector("#the-excuse").innerHTML = generadorExcusas();
   });
-
-  console.log("Hello baby");
 };
 
 let generadorExcusas = () => {
-  let quien = [
+  const quien = [
     "Harry Potter",
     "Albus Dumbledore",
     "Dobby",
@@ -41,9 +39,10 @@ let generadorExcusas = () => {
     "Minerva McGonagall",
     "Draco Malfoy",
     "Sirius Black",
-    "Jorge"
+    "Jorge",
+    "Miquel",
   ];
-  let accion = [
+  const accion = [
     " comió",
     " cagó",
     " enfadó",
@@ -63,9 +62,9 @@ let generadorExcusas = () => {
     " saltó",
     " se jugó",
     " estudió",
-    " vendió"
+    " vendió",
   ];
-  let cosas = [
+  const cosas = [
     " la mosca",
     " los gamusinos",
     " los caracoles",
@@ -125,9 +124,9 @@ let generadorExcusas = () => {
     " la tristeza",
     " el sonido",
     " el césped",
-    " el teléfono"
+    " el teléfono",
   ];
-  let donde = [
+  const donde = [
     " en la academia Mágica Beauxbatons",
     " en el andén 9 ¾",
     " en Azkaban",
@@ -177,19 +176,19 @@ let generadorExcusas = () => {
     " en la casa de los Gritos",
     " en Nurmengard",
     " en el número 4 de Privet Drive",
-    " en el valle de Godric"
+    " en el valle de Godric",
   ];
-  let quienIndex = Math.floor(Math.random() * quien.length);
-  let accionIndex = Math.floor(Math.random() * accion.length);
-  let cosasIndex = Math.floor(Math.random() * cosas.length);
-  let dondeIndex = Math.floor(Math.random() * donde.length);
+  let randomQuien = Math.floor(Math.random() * quien.length);
+  let randomAccion = Math.floor(Math.random() * accion.length);
+  let randomCosas = Math.floor(Math.random() * cosas.length);
+  let randomDonde = Math.floor(Math.random() * donde.length);
   return (
-    quien[quienIndex] +
+    quien[randomQuien] +
     "" +
-    accion[accionIndex] +
+    accion[randomAccion] +
     "" +
-    cosas[cosasIndex] +
+    cosas[randomCosas] +
     "" +
-    donde[dondeIndex]
+    donde[randomDonde]
   );
 };
